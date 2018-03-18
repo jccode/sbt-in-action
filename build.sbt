@@ -20,7 +20,6 @@ lazy val common = (project in file("common"))
     commonSettings,
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test",
     makeVersionProperties := {
-      println((resourceManaged in Compile).value)
       val propFile = new File((resourceManaged in Compile).value, "version.properties")
       val content = s"version=${gitHeadCommitSha.value}"
       IO.write(propFile, content)
