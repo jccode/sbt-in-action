@@ -1,6 +1,6 @@
 import scala.sys.process.Process
 
-name := "sbt-test"
+name := "sbt-in-action"
 
 // custom keys for this build
 val gitHeadCommitSha = taskKey[String]("Determines the current git commit SHA")
